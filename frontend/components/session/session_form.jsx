@@ -6,14 +6,14 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      email: '',
       password: ''
     };
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn?) {
+    if (nextProps.loggedIn) {
       this.props.history.push('/');
     }
   }
@@ -47,12 +47,40 @@ class SessionForm extends React.Component {
           </li>
         ))}
       </ul>
-    )
+    );
   }
 
   render() {
-    <div className="log_in-form-wrapper">
-      <form onSubmit={this.handleSubmit} className='log_in-form'
-    </div>
+    return (
+      <div className="log_in-form-wrapper">
+        <form onSubmit={this.handleSubmit} className='log_in-form'>
+          <br/>
+            Please {this.props.formType} or {this.navLink()}
+            {this.renderErrors()}
+            <div className="log_in-form">
+              <br/>
+              <label>email:
+                <input type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  className="login-input"
+                />
+              </label>
+              <br/>
+              <label>Password:
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+              </label>
+              <br/>
+              <input type="submit" value="Submit" />
+            </div>
+        </form>
+      </div>
+    );
   }
 }
+
+export default withRouter(SessionForm);
