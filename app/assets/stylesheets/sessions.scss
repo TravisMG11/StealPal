@@ -1,7 +1,12 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
 .main-header {
+  font-family: fantasy;
   background-color: #FF4338;
   font-size: 40px;
   color: white;
@@ -46,7 +51,7 @@
   margin: 30px auto 30px auto;
   // border:
   width: 33%;
-  height: 70vh;
+  height: 570px;
   border-radius: 7px;
 }
 .log_in-div {
@@ -77,6 +82,7 @@
 }
 
 .log_in-input {
+  font-family: 'Montserrat', sans-serif;
   display: block;
   font-size: 35px;
   width: 90%;
@@ -86,23 +92,27 @@
 }
 
 .form-label {
+  font-family: 'Montserrat', sans-serif;
   display: block;
   width: 100%;
   margin: 0 auto;
 }
 
 .greeting-container {
+  font-family: 'Montserrat', sans-serif;
   margin: 0 auto 30px auto;
   font-size: 20px;
 }
 
 .RIP {
+  font-family: 'Montserrat', sans-serif;
   font-size: 35px;
   margin-bottom: 100px;
   color: #FF4338;
   font-weight: bold;
 }
 .log_in-button {
+  font-family: 'Montserrat', sans-serif;
   background-color: #FF4338;
   width: 90%;
   border: 1px solid grey;
@@ -113,8 +123,9 @@
 }
 .purple-foot {
   background-color: #430098;
-  margin-top: 100px;
-  height: 24vh;
+  margin-top: 135px;
+  // height: 24vh;
+  height: 230px;
   // position: absolute;
   // right: 0;
   // bottom: 0;
@@ -122,6 +133,6 @@
   text-align: center;
 }
 //  footer color #430098
-
+//  font-family: 'Montserrat', sans-serif;
 // font color  #6F6B6B
 //  log in or sign up text #504D4C
