@@ -14,13 +14,16 @@ const App = () => (
   <div className="main-stuff">
     <header className="main-header">
       <h1>STEALPAL</h1>
-      <h2>No such things as halfway crooks</h2>
+      <h3 className="placeholder-button">LOG IN</h3>
 
     </header>
     <div className="fake-modal">
-      <GreetingContainer />
+      <GreetingContainer className="greeting-container"/>
       <Route path="/log_in" component={SessionFormContainer} />
       <Route path="/sign_up" component={SessionFormContainer} />
+    </div>
+    <div className="purple-foot">
+
     </div>
   </div>
 );
