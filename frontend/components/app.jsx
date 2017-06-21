@@ -12,15 +12,16 @@ import {
 
 const App = () => (
   <div className="main-stuff">
-    <header>
-      <h1>StealPal: Steal a Meal!</h1>
+    <header className="main-header">
+      <h1>STEALPAL</h1>
       <h2>No such things as halfway crooks</h2>
 
     </header>
-
-    <GreetingContainer className="fake-modal"/>
-    <Route path="/log_in" component={SessionFormContainer} />
-    <Route path="/sign_up" component={SessionFormContainer} />
+    <div className="fake-modal">
+      <GreetingContainer />
+      <Route path="/log_in" component={SessionFormContainer} />
+      <Route path="/sign_up" component={SessionFormContainer} />
+    </div>
   </div>
 );
 

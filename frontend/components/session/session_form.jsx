@@ -56,23 +56,25 @@ class SessionForm extends React.Component {
       <div className="log_in-form-wrapper">
         <form onSubmit={this.handleSubmit} className='log_in-form'>
           <br/>
-            Please {this.props.formType} or {this.navLink()}
-            {this.renderErrors()}
-            <div className="log_in-form">
+            <header className="form-header" >
+              Please {this.props.formType} or {this.navLink()}
+              {this.renderErrors()}
+            </header>
+            <div className="log_in-div">
               <br/>
-              <label>Email:
+              <label className="form-label">Email:
                 <input type="text"
                   value={this.state.email}
                   onChange={this.update('email')}
-                  className="login-input"
+                  className="log_in-input"
                 />
               </label>
               <br/>
-              <label>Password:
+              <label className="form-label">Password:
                 <input type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
-                  className="login-input"
+                  className="log_in-input"
                 />
               </label>
               <br/>

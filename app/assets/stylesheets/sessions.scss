@@ -1,18 +1,72 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-header {
+.main-header {
+  background-color: red;
+  color: white;
   margin-top: 0px;
+  padding: 0px 17px 0px 17px;
   display: flex;
+  width: 100%;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.main-stuff {
-  flex-direction: column;
+.form-header {
   display: flex;
-  // justify-content:
+  margin: auto;
+}
+.main-stuff {
+  background-color: green;
+  height: 100vh;
+  align-items: center;
 }
 
-.fake-modal {
+// .fake-modal {
+//   margin-top: 30;
+//   margin: auto;
+//   // border:
+//   width: 635px;
+// }
+.log_in-form {
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // margin-top: 30;
+  margin: auto;
+  // border:
+  width: 33%;
+  height: 70vh;
+  border-radius: 10px;
+}
+.log_in-div {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  // margin-top: 30
+  width: 95%;
+  margin: auto;
+  // border:
+  // width: 33%;
+  // height: 70vh;
+  // border-radius: 10px;
+}
+.log_in-wrapper {
+  display: flex;
+  flex-direction: column;
+  // margin-top: 30;
+  margin: auto;
+  // border:
+  width: 100%;
+}
+.log_in-input {
+  font-size: 30px;
+  width: 80%;
+}
+
+.form-label {
+  width: 100%;
   margin: auto;
 }
