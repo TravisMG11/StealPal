@@ -6,20 +6,19 @@ import { Provider } from 'react-redux';
 import {
   Route,
   Redirect,
-  Switch,
   Link,
   HashRouter
 } from 'react-router-dom';
 
 const App = () => (
-  <div>
+  <div className="main-stuff">
     <header>
       <h1>StealPal: Steal a Meal!</h1>
-      <h2>Whattup, crooks?!</h2>
-      <GreetingContainer />
-      
+      <h2>No such things as halfway crooks</h2>
+
     </header>
 
+    <GreetingContainer className="fake-modal"/>
     <Route path="/log_in" component={SessionFormContainer} />
     <Route path="/sign_up" component={SessionFormContainer} />
   </div>

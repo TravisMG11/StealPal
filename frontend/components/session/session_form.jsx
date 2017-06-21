@@ -7,7 +7,6 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      redirect: false,
       email: '',
       password: ''
     };
@@ -24,7 +23,6 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({user});
-    // .then(this.state.redirect = true)
   }
 
   update(field) {
