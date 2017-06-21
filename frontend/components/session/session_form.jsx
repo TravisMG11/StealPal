@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className='log_in-form'>
           <br/>
             <header className="form-header" >
-              <h2 className="RIP-prodigy-from-mobb-deep">No such things as halfway COOKS</h2>
+              <h2 className="RIP">No such things as halfway COOKS</h2>
               Please {this.props.formType} or {this.navLink()}
               {this.renderErrors()}
             </header>
