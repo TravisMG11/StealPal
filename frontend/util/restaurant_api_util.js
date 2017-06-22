@@ -8,7 +8,7 @@ export const add_rest = restaurant => (
 
 export const show_rests = restaurant => (
   $.ajax({
-    method: 'POST',
+    method: 'GET',
     url: '/api/restaurants',
     data: restaurant
   })
