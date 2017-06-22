@@ -6,7 +6,9 @@
   font-family: 'Montserrat', sans-serif;
 }
 .main-header {
-  font-family: fantasy;
+  font-family: sans-serif;
+  position: fixed;
+  top: 0px;
   background-color: #FF4338;
   font-size: 40px;
   color: white;
@@ -26,9 +28,10 @@
   margin: 0 auto;
 }
 .main-stuff {
+  margin-top: 60px;
   background-image: image-url("burgernfries.jpg");
   background-size: cover;
-  height: 100vh;
+  min-height: 1000px;
   align-items: center;
 }
 
@@ -121,17 +124,20 @@
   margin: 0 auto;
   height: 35px;
 }
-.purple-foot {
-  background-color: #430098;
-  margin-top: 135px;
-  // height: 24vh;
-  height: 230px;
-  // position: absolute;
-  // right: 0;
-  // bottom: 0;
-  // left: 0;
-  text-align: center;
-}
+// .purple-foot {
+//   background-color: #430098;
+//   margin-top: 135px;
+//   // height: 24vh;
+//   height: 230px;
+//   // position: absolute;
+//   // right: 0;
+//   // bottom: 0;
+//   // left: 0;
+//   // text-align: center;
+//   position:absolute;
+//   width:100%;
+//   bottom: 0;
+// }
 //  footer color #430098
 //  font-family: 'Montserrat', sans-serif;
 // font color  #6F6B6B
