@@ -1,3 +1,46 @@
 // Place all the styles related to the Restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.indexDiv {
+  background-color: white;
+  padding: 20px;
+  width: 75%;
+}
+
+.indexTitle {
+  background-color: blue;
+}
+
+.indexPage {
+  background-color: white;
+  width: 100%;
+}
+
+.restaurants {
+  background-color: white;
+  // width: 30%;
+  // height: 540px;
+  // font-size: 15;
+  border: 1px solid grey;
+  border-radius: 7px;
+}
+
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.restaurant {
+  margin: 10px;
+  background-color: white;
+  flex-grow: 1;
+  width: 30%;
+  height: 540px;
+  font-size: 15;
+  border: 1px solid grey;
+  border-radius: 7px;
+}

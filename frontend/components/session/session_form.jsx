@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -20,10 +21,13 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = this.state;
-    this.props.processForm({user});
+      const user = this.state;
+      this.props.processForm({user});
   }
 
+  handleDemo(e) {
+    this.props.log_in({user: {email: "hungry@hunger.com", password: "starving"}});
+  }
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -53,34 +57,37 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="log_in-form-wrapper">
-        <form onSubmit={this.handleSubmit} className='log_in-form'>
-          <br/>
-            <header className="form-header" >
-              <h2 className="RIP">No such things as halfway COOKS</h2>
-              Please {this.props.formType} or {this.navLink()}
-              {this.renderErrors()}
-            </header>
-            <div className="log_in-div">
-              <br/>
-              <label className="form-label">Email:
-                <input type="text"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  className="log_in-input"
-                />
-              </label>
-              <br/>
-              <label className="form-label">Password:
-                <input type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className="log_in-input"
-                />
-              </label>
-              <br/>
-              <input className="log_in-button" type="submit" value="Submit" />
-            </div>
-        </form>
+        <div className="please-work">
+          <form onSubmit={this.handleSubmit} className='log_in-form'>
+            <br/>
+              <header className="form-header" >
+                <h2 className="RIP">No such things as halfway COOKS</h2>
+                Please {this.props.formType} or {this.navLink()}
+                {this.renderErrors()}
+              </header>
+              <div className="log_in-div">
+                <br/>
+                <label className="form-label">Email:
+                  <input type="text"
+                    value={this.state.email}
+                    onChange={this.update('email')}
+                    className="log_in-input"
+                  />
+                </label>
+                <br/>
+                <label className="form-label">Password:
+                  <input type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    className="log_in-input"
+                  />
+                </label>
+                <br/>
+                <input className="log_in-button" type="submit" value="Submit" />
+              </div>
+          </form>
+          <button onClick={this.handleDemo} className="demo">Demo Log In</button>
+        </div>
       </div>
     );
   }

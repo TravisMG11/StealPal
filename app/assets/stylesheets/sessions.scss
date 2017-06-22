@@ -45,18 +45,18 @@
 .placeholder-button {
   font-size: 15px;
 }
-.log_in-form {
-  background-color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  // margin-top: 30;
-  margin: 30px auto 30px auto;
-  // border:
-  width: 33%;
-  height: 570px;
-  border-radius: 7px;
-}
+// .log_in-form {
+//   background-color: #FFFFFF;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   // margin-top: 30;
+//   margin: 30px auto 30px auto;
+//   // border:
+//   width: 33%;
+//   height: 570px;
+//   border-radius: 7px;
+// }
 .log_in-div {
   background-color: #FFFFFF;
   display: flex;
@@ -107,6 +107,19 @@
   font-size: 20px;
 }
 
+.please-work{
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // margin-top: 30;
+  margin: 30px auto 30px auto;
+  // border:
+  width: 33%;
+  height: 570px;
+  border-radius: 7px;
+}
+
 .RIP {
   font-family: 'Montserrat', sans-serif;
   font-size: 35px;
@@ -118,6 +131,17 @@
   font-family: 'Montserrat', sans-serif;
   background-color: #FF4338;
   width: 90%;
+  border: 1px solid grey;
+  text-align: center;
+  border-radius: 7px;
+  margin: 0 auto;
+  height: 35px;
+}
+.demo {
+  ont-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: #430098;
+  width: 80%;
   border: 1px solid grey;
   text-align: center;
   border-radius: 7px;
