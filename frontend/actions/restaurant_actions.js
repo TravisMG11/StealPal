@@ -21,16 +21,16 @@ export const removeRestaurant = restaurant => ({
   restaurant
 });
 
-export const createRestaurant = restaurant => dispatch => (
-  ApiUtil.createRestaurant(restaurant).then(restaurant => dispatch(receiveRestaurant(restaurant)))
+export const createRest = restaurant => dispatch => (
+  ApiUtil.addRestaurant(restaurant).then(restaurant => dispatch(receiveRestaurant(restaurant)))
 );
 
 export function showRestaurants() {
   return dispatch => {
-    return ApiUtil.showRestaurants().then(restaurants => dispatch(receiveRestaurants(restaurants)));
+    return ApiUtil.show_restaurants().then(restaurants => dispatch(receiveRestaurants(restaurants)));
   };
 }
 
 export const deleteRestaurant = restaurant => dispatch => (
-  ApiUtil.deleteRestau(restaurant).then(restaurant => dispatch(removeRestaurant(restaurant)))
+  ApiUtil.removeRestaurant(restaurant).then(restaurant => dispatch(removeRestaurant(restaurant)))
 );

@@ -1,6 +1,7 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session/session_form_container';
+import RestaurantIndexContainer from './restaurants/restaurant_index_container';
 import { Provider } from 'react-redux';
 
 import {
@@ -21,6 +22,8 @@ const App = () => (
       <GreetingContainer className="greeting-container"/>
       <Route path="/log_in" component={SessionFormContainer} />
       <Route path="/sign_up" component={SessionFormContainer} />
+      <Route exact path="/restaurants" component={RestaurantIndexContainer} />
+
     </div>
     <div className="purple-foot">
 

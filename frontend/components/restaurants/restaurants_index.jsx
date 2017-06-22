@@ -1,20 +1,20 @@
 import React from "react";
-import PostIndexItem from "./PostIndexItem";
-import {PostForm} from "../PostForm";
+import RestaurantItem from "./restaurant_item";
 
-class PostIndex extends React.Component {
+class RestaurantsIndex extends React.Component {
 
   componentDidMount() {
-    this.props.fetchPosts();
+    this.props.showRestaurants();
   }
 
   render() {
     const restaurants = this.props.restaurants.map(restaurant => {
-      return <PostIndexItem key={restaurant.id} restaurant={ restaurant } deletePost={this.props.deletePost}/>;
+      debugger
+      return <RestaurantItem key={restaurant.id} restaurant={ restaurant } />;
     });
     return (
       <div className="indexDiv">
-        <h1 className="indexTitle">Restaurants</h1>
+        <h1 className="indexTitle">Restaurants?!?!?!</h1>
         <div className="indexPage">
           <div className="restaurants">
             <ul>{restaurants}</ul>
@@ -25,4 +25,4 @@ class PostIndex extends React.Component {
   }
 }
 
-export default PostIndex;
+export default RestaurantsIndex;

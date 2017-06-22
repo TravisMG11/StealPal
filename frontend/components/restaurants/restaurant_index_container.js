@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { showRestaurants, deleteRestaurant, createRestaurant } from "../../actions/restaurant_actions";
 import { values } from "lodash";
-import RestaurantIndex from "./restaurant_index";
+import RestaurantsIndex from "./restaurants_index";
 
 function selectAllRestaurants(restaurants) {
   return values(restaurants);
@@ -22,4 +22,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(restaurants_index);
+export default connect(mapStateToProps, mapDispatchToProps)(RestaurantsIndex);
