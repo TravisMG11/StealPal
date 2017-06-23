@@ -21,17 +21,17 @@ rest9 = Restaurant.create!(name: "Soprano's", latitude: 9, longitude: 9, address
 rest10 = Restaurant.create!(name: "Hola Pasta Mexitalian", latitude: 10, longitude: 10, address: "Nunya Bizniss")
 rest11 = Restaurant.create!(name: "Wen Bo's Rugged Jaw Saloon", latitude: 11, longitude: 11, address: "Nunya Bizniss")
 
-Meal.create!(name: "Mom's Chicken Noodle", restaurant_id: 1, portion_size: "L")
-Meal.create!(name: "Blue Bantha Milk", restaurant_id: 2, portion_size: "S")
-Meal.create!(name: "Medium Cheese and Cherry Coke", restaurant_id: 3, portion_size: "M")
-Meal.create!(name: "The Best Burger and fries", restaurant_id: 4, portion_size: "L")
-Meal.create!(name: "So Gouda Burger", restaurant_id: 5, portion_size: "M")
-Meal.create!(name: "Squid Sticks", restaurant_id: 6, portion_size: "S")
-Meal.create!(name: "Tofu Scramble", restaurant_id: 7, portion_size: "S")
-Meal.create!(name: "Two Krabby Patties", restaurant_id: 8, portion_size: "L")
-Meal.create!(name: "Fettuccine Alfredo Blackout", restaurant_id: 9, portion_size: "large")
-Meal.create!(name: "Chicken Parm Tacos", restaurant_id: 10, portion_size: "large")
-Meal.create!(name: "Roast Turkey Sandwich and Fries", restaurant_id: 11, portion_size: "large")
+Meal.create!(name: "Mom's Chicken Noodle", restaurant_id: 1, portion_size: "L", limit: 2)
+Meal.create!(name: "Blue Bantha Milk", restaurant_id: 2, portion_size: "S", limit: 2)
+Meal.create!(name: "Medium Cheese and Cherry Coke", restaurant_id: 3, portion_size: "M", limit: 2)
+Meal.create!(name: "The Best Burger and fries", restaurant_id: 4, portion_size: "L", limit: 2)
+Meal.create!(name: "So Gouda Burger", restaurant_id: 5, portion_size: "M", limit: 2)
+Meal.create!(name: "Squid Sticks", restaurant_id: 6, portion_size: "S", limit: 2)
+Meal.create!(name: "Tofu Scramble", restaurant_id: 7, portion_size: "S", limit: 2)
+Meal.create!(name: "Two Krabby Patties", restaurant_id: 8, portion_size: "L", limit: 2)
+Meal.create!(name: "Fettuccine Alfredo Blackout", restaurant_id: 9, portion_size: "large", limit: 2)
+Meal.create!(name: "Chicken Parm Tacos", restaurant_id: 10, portion_size: "large", limit: 2)
+Meal.create!(name: "Roast Turkey Sandwich and Fries", restaurant_id: 11, portion_size: "large", limit: 2)
 
 
 # rest1.set_todays_meal!
