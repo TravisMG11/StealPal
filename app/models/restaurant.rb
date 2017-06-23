@@ -3,6 +3,16 @@ class Restaurant < ActiveRecord::Base
 
   has_many :meals
 
+  def current_meal
+    self.meals.find(current_meal_id)
+  end
+
+  def set_todays_meal!
+    self.current_meal_id = self.meals.sample.id
+    self.save!
+  end
+
+
   # def new
   #
   # end

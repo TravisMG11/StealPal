@@ -8,21 +8,23 @@
 User.destroy_all
 Restaurant.destroy_all
 
-User.create(email: 'hungry@hunger.com', password: 'starving')
-Restaurant.create(name: "Yo Momma's Diner", latitude: 1, longitude: 1, address: "Nunya Bizniss")
-Restaurant.create(name: "Mos Eisley Cantina", latitude: 2, longitude: 2, address: "Nunya Bizniss")
-Restaurant.create(name: "Joey P's Pizzeria", latitude: 3, longitude: 3, address: "Nunya Bizniss")
-Restaurant.create(name: "David Chen's Burger Pen", latitude: 4, longitude: 4, address: "Nunya Bizniss")
-Restaurant.create(name: "Bob's Burgers", latitude: 5, longitude: 5, address: "Nunya Bizniss")
-Restaurant.create(name: "Charlie's Cephalopods", latitude: 5, longitude: 5, address: "Nunya Bizniss")
-Restaurant.create(name: "Vlad's Vegan Beach Restaurant", latitude: 6, longitude: 6, address: "Nunya Bizniss")
-Restaurant.create(name: "The Krusty Krab", latitude: 7, longitude: 7, address: "Nunya Bizniss")
-Restaurant.create(name: "Soprano's", latitude: 8, longitude: 8, address: "Nunya Bizniss")
-Restaurant.create(name: "Hola Pasta Mexitalian", latitude: 9, longitude: 9, address: "Nunya Bizniss")
-Restaurant.create(name: "Wen Bo's Rugged Jaw Saloon", latitude: 10, longitude: 10, address: "Nunya Bizniss")
+User.create!(email: 'hungry@hunger.com', password: 'starving')
+rest1 = Restaurant.create!(name: "Yo Momma's Diner", latitude: 1, longitude: 1, address: "Nunya Bizniss")
+Restaurant.create!(name: "Mos Eisley Cantina", latitude: 2, longitude: 2, address: "Nunya Bizniss")
+Restaurant.create!(name: "Joey P's Pizzeria", latitude: 3, longitude: 3, address: "Nunya Bizniss")
+Restaurant.create!(name: "David Chen's Burger Pen", latitude: 4, longitude: 4, address: "Nunya Bizniss")
+Restaurant.create!(name: "Bob's Burgers", latitude: 5, longitude: 5, address: "Nunya Bizniss")
+Restaurant.create!(name: "Charlie's Cephalopods", latitude: 5, longitude: 5, address: "Nunya Bizniss")
+Restaurant.create!(name: "Vlad's Vegan Beach Restaurant", latitude: 6, longitude: 6, address: "Nunya Bizniss")
+Restaurant.create!(name: "The Krusty Krab", latitude: 7, longitude: 7, address: "Nunya Bizniss")
+Restaurant.create!(name: "Soprano's", latitude: 8, longitude: 8, address: "Nunya Bizniss")
+Restaurant.create!(name: "Hola Pasta Mexitalian", latitude: 9, longitude: 9, address: "Nunya Bizniss")
+Restaurant.create!(name: "Wen Bo's Rugged Jaw Saloon", latitude: 10, longitude: 10, address: "Nunya Bizniss")
 
-# Meal.create()
+# Meal.create(n r_id ps )
 
+
+# rest1.set_todays_meal!
 
 # Mos Eisley Cantina210 7th Ave
 #

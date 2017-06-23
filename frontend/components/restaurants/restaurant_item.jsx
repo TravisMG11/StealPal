@@ -4,6 +4,6 @@ import { Link } from 'react-router-dom';
 export default ({ restaurant }) => (
   <li className="restaurant">
     {restaurant.name}
-    {restaurant.address}
+    // {restaurant.address}
   </li>
 );
