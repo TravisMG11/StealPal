@@ -8,6 +8,7 @@
 User.destroy_all
 Restaurant.destroy_all
 
+# 
 User.create!(email: 'hungry@hunger.com', password: 'starving')
 rest1 = Restaurant.create!(name: "Yo Momma's Diner", latitude: 1, longitude: 1, address: "Nunya Bizniss")
 rest2 = Restaurant.create!(name: "Mos Eisley Cantina", latitude: 2, longitude: 2, address: "Nunya Bizniss")
