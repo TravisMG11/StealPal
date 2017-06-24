@@ -14,7 +14,7 @@ import {
 const App = () => (
   <div className="main-stuff">
     <header className="main-header">
-      <h1>STEALPAL</h1>
+      <img className="logo" src={window.images.stolen_logo} />
       <h3 className="placeholder-button">LOG IN</h3>
 
     </header>

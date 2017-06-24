@@ -22,12 +22,20 @@ module StealPal
     config.paperclip_defaults = {
       :storage => :s3,
       :s3_credentials => {
+        :s3_host_name => "s3-#{ENV["s3_region"]}.amazonaws.com",
         :bucket => ENV["s3_bucket"],
         :access_key_id => ENV["s3_access_key_id"],
         :secret_access_key => ENV["s3_secret_access_key"],
         :s3_region => ENV["s3_region"]
       }
     }
+
+    # :bucket => ENV["s3_bucket"],
+    #   :access_key_id => ENV["s3_access_key_id"],
+    #   :secret_access_key => ENV["s3_secret_access_key"],
+    #   s3_host_name: "s3-#{ENV['s3_region']}.amazonaws.com",
+    #   :s3_region => ENV["s3_region"],
+    #   :url => ":s3_host_name"
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
   end

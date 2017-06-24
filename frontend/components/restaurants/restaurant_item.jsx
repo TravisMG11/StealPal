@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 export default ({ restaurant }) => (
   <li className="restaurant">
     <div>
-      <img src={restaurant.meal.image_url}/>
-      {restaurant.meal.name}
+      <img className="meal-pic" src={restaurant.meal.image_url}/>
+      <span className="meal-name">{restaurant.meal.name}</span>
     </div>
-    <div>
-      {restaurant.name}
-      {restaurant.address}
+    <div className="rest-info">
+      <span className="rest-name">{restaurant.name}</span>
+      <span className="rest-add">{restaurant.address}</span>
     </div>
   </li>
 );
