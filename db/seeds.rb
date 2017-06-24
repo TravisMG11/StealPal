@@ -9,6 +9,8 @@ User.destroy_all
 Restaurant.destroy_all
 
 #
+
+
 User.create!(email: 'hungry@hunger.com', password: 'starving')
 rest1 = Restaurant.create!(name: "Yo Momma's Diner", latitude: 1, longitude: 1, address: "Nunya Bizniss")
 rest2 = Restaurant.create!(name: "Mos Eisley Cantina", latitude: 2, longitude: 2, address: "Nunya Bizniss")
@@ -22,17 +24,19 @@ rest9 = Restaurant.create!(name: "Soprano's", latitude: 9, longitude: 9, address
 rest10 = Restaurant.create!(name: "Hola Pasta Mexitalian", latitude: 10, longitude: 10, address: "Nunya Bizniss")
 rest11 = Restaurant.create!(name: "Wen Bo's Rugged Jaw Saloon", latitude: 11, longitude: 11, address: "Nunya Bizniss")
 
-Meal.create!(name: "Mom's Chicken Noodle", restaurant_id: rest1.id, portion_size: "L", limit: 2)
-Meal.create!(name: "Blue Bantha Milk", restaurant_id: rest2.id, portion_size: "S", limit: 2)
-Meal.create!(name: "Medium Cheese and Cherry Coke", restaurant_id: rest3.id, portion_size: "M", limit: 2)
-Meal.create!(name: "The Best Burger and fries", restaurant_id: rest4.id, portion_size: "L", limit: 2)
-Meal.create!(name: "So Gouda Burger", restaurant_id: rest5.id, portion_size: "M", limit: 2)
-Meal.create!(name: "Squid Sticks", restaurant_id: rest6.id, portion_size: "S", limit: 2)
-Meal.create!(name: "Tofu Scramble", restaurant_id: rest7.id, portion_size: "S", limit: 2)
-Meal.create!(name: "Two Krabby Patties", restaurant_id: rest8.id, portion_size: "L", limit: 2)
-Meal.create!(name: "Fettuccine Alfredo Blackout", restaurant_id: rest9.id, portion_size: "large", limit: 2)
-Meal.create!(name: "Chicken Parm Tacos", restaurant_id: rest10.id, portion_size: "large", limit: 2)
-Meal.create!(name: "Roast Turkey Sandwich and Fries", restaurant_id: rest11.id, portion_size: "large", limit: 2)
+
+moms = File.open('app/assets/images/soop.jpg')
+Meal.create!(name: "Mom's Chicken Noodle", restaurant_id: rest1.id, portion_size: "L", limit: 2, image: moms)
+Meal.create!(name: "Blue Bantha Milk", restaurant_id: rest2.id, portion_size: "S", limit: 2, image: '.jpg')
+Meal.create!(name: "Medium Cheese and Cherry Coke", restaurant_id: rest3.id, portion_size: "M", limit: 2, image: '.jpg')
+Meal.create!(name: "The Best Burger and fries", restaurant_id: rest4.id, portion_size: "L", limit: 2, image: '.jpg')
+Meal.create!(name: "So Gouda Burger", restaurant_id: rest5.id, portion_size: "M", limit: 2, image: '.jpg')
+Meal.create!(name: "Squid Sticks", restaurant_id: rest6.id, portion_size: "S", limit: 2, image: '.jpg')
+Meal.create!(name: "Tofu Scramble", restaurant_id: rest7.id, portion_size: "S", limit: 2, image: '.jpg')
+Meal.create!(name: "Two Krabby Patties", restaurant_id: rest8.id, portion_size: "L", limit: 2, image: '.jpg')
+Meal.create!(name: "Fettuccine Alfredo Blackout", restaurant_id: rest9.id, portion_size: "large", limit: 2, image: '.jpg')
+Meal.create!(name: "Chicken Parm Tacos", restaurant_id: rest10.id, portion_size: "large", limit: 2, image: '.jpg')
+Meal.create!(name: "Roast Turkey Sandwich and Fries", restaurant_id: rest11.id, portion_size: "large", limit: 2, image: '.jpg')
 
 [rest1, rest2, rest3, rest4, rest5, rest6, rest7, rest8, rest9, rest10, rest11].each(&:set_todays_meal!)
 
