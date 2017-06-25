@@ -9,9 +9,17 @@ import {sign_up, log_in, log_out} from './actions/session_actions';
 // window.log_out = log_out;
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  // const store = configureStore();
+  let store;
+  if (window.currentUser) {
+   const preloadedState = { session: { currentUser: window.currentUser } };
+   store = configureStore(preloadedState);
+   delete window.currentUser;
+ } else {
+   store = configureStore();
+ }
+ window.getState = store.getState;
+ window.dispatch = store.dispatch;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
 });

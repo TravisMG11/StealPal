@@ -3,6 +3,7 @@ import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session/session_form_container';
 import RestaurantIndexContainer from './restaurants/restaurant_index_container';
 import { Provider } from 'react-redux';
+import  { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import {
   Route,
@@ -20,11 +21,11 @@ const App = () => (
     </header>
     <div className="fake-modal">
       <GreetingContainer className="greeting-container"/>
-      <Route path="/log_in" component={SessionFormContainer} />
-      <Route path="/sign_up" component={SessionFormContainer} />
-      <Route exact path="/restaurants" component={RestaurantIndexContainer} />
+      <AuthRoute path="/log_in" component={SessionFormContainer} />
+      <AuthRoute path="/sign_up" component={SessionFormContainer} />
 
     </div>
+    <ProtectedRoute exact path="/restaurants" component={RestaurantIndexContainer} />
     <div className="purple-foot">
 
     </div>
