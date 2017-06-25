@@ -13,9 +13,21 @@
  *= require_tree .
  *= require_self
  */
+ .map-stuff {
+   display: flex;
+
+ }
  .map {
-   width: 500px;
-   height: 500px;
-   float: left;
-   position: relative;
+  width: 25%;
+  /*height: 100%;*/
+  float: right;
+  position: fixed;
+  /*top: 0;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+  position: fixed;
+  /*max-height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);*/
+  right: 0;
+  top: 60px;
  }

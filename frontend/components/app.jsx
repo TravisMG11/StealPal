@@ -2,6 +2,7 @@ import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session/session_form_container';
 import RestaurantIndexContainer from './restaurants/restaurant_index_container';
+import RestaurantSearchContainer from './search/restaurant_search_container';
 import { Provider } from 'react-redux';
 import  { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -25,7 +26,7 @@ const App = () => (
       <AuthRoute path="/sign_up" component={SessionFormContainer} />
 
     </div>
-    <ProtectedRoute exact path="/restaurants" component={RestaurantIndexContainer} />
+    <ProtectedRoute exact path="/restaurants" component={RestaurantSearchContainer} />
     <div className="purple-foot">
 
     </div>
