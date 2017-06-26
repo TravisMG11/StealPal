@@ -7,7 +7,7 @@ import RestaurantMap from '../map/restaurant_map';
 const RestaurantSearch = ({ restaurants, updateFilter }) => (
   <div className="map-stuff">
     <RestaurantIndexContainer />
-    <RestaurantMap />
+    <RestaurantMap restaurants={restaurants}/>
   </div>
 )
 

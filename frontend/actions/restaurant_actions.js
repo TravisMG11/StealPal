@@ -21,7 +21,7 @@ export const removeRestaurant = restaurant => ({
   restaurant
 });
 
-export const createRest = restaurant => dispatch => (
+export const createRestaurant = restaurant => dispatch => (
   ApiUtil.addRestaurant(restaurant).then(restaurant => dispatch(receiveRestaurant(restaurant)))
 );
 

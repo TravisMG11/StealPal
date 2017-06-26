@@ -4,7 +4,7 @@ import {RECEIVE_RESTAURANTS, RECEIVE_RESTAURANT, REMOVE_RESTAURANT} from "../act
 const RestaurantReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_RESTAURANTS: {
-      let newState = action.restaurants;
+      const newState = action.restaurants;
       return newState;
     }
     case RECEIVE_RESTAURANT: {

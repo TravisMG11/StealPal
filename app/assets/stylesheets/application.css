@@ -15,19 +15,29 @@
  */
  .map-stuff {
    display: flex;
-
+ }
+ .map-box {
+   background-color: white;
+   height: calc(100vh - 60px);
+   width: 25%;
+   position: fixed;
+   top: 60px;
+   right: 0;
+   padding-left: 10px;
+   box-sizing: border-box;
  }
  .map {
-  width: 25%;
-  /*height: 100%;*/
+   height: 100%;
+  /*width: 25%;
+  height: 90vh;
   float: right;
-  position: fixed;
-  /*top: 0;*/
-  /*right: 0;*/
-  /*bottom: 0;*/
-  position: fixed;
-  /*max-height: calc(100vh - 60px);
-  min-height: calc(100vh - 60px);*/
+
+  top: 60;
   right: 0;
-  top: 60px;
+  bottom: 0;
+  position: fixed;
+  max-height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
+  right: 0;
+  top: 0px;*/
  }

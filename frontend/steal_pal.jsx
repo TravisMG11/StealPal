@@ -3,7 +3,8 @@ import React from 'react';
 import configureStore from './store/store';
 import Root from './components/root';
 import {sign_up, log_in, log_out} from './actions/session_actions';
-
+import { showRestaurants } from './actions/restaurant_actions';
+  window.showRestaurants = showRestaurants;
 // window.sign_up = sign_up;
 // window.log_in = log_in;
 // window.log_out = log_out;
