@@ -8,7 +8,7 @@ const RestaurantSearch = ({ restaurants, updateFilter }) => {
   return (
     <div className="map-stuff">
       <RestaurantIndexContainer />
-      <RestaurantMap restaurants={restaurants}/>
+      <RestaurantMap restaurants={restaurants} updateFilter={updateFilter}/>
     </div>
 
   )

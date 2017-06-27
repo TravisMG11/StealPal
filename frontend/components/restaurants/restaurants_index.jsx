@@ -3,9 +3,9 @@ import RestaurantItem from "./restaurant_item";
 
 class RestaurantsIndex extends React.Component {
 
-  componentDidMount() {
-    this.props.showRestaurants();
-  }
+  // componentDidMount() {
+  //   this.props.showRestaurants();
+  // }
 
   render() {
     const restaurants = this.props.restaurants.map(restaurant => {

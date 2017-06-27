@@ -22,10 +22,11 @@
 // );
 
 
-export function show_restaurants() {
+export function show_restaurants(filters) {
   return $.ajax({
     url: "/api/restaurants",
     method: "GET",
+    data: filters
   });
 }
 

@@ -1,6 +1,14 @@
 class Api::RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.all
+    restaurants = bounds ? Restaurant.in_bounds(params[:bounds]) : Restaurant.all
+
+    # if (params[] && params[])  # maybe for filtering
+    @restaurants = restaurants
+    render :index
+  end
+
+  def bounds
+    params[:bounds]
   end
 
   def show

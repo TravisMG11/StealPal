@@ -15,7 +15,6 @@ export class MarkerManager {
   }
 
   createMarker(restaurant) {
-    const lat = restaurant.latitude
     const position = new google.maps.LatLng(restaurant.latitude, restaurant.longitude);
     const marker = new google.maps.Marker({
       position,
@@ -23,8 +22,8 @@ export class MarkerManager {
       restaurantId: restaurant.id
     });
 
-    // marker.addListener('click', () => this.handleClick(restaurant));
-    // this.markers[marker.restaurantId] = marker;
+    marker.addListener('click', () => this.handleClick(restaurant));
+    this.markers[marker.restaurantId] = marker;
   }
 
   removeMarker(marker) {

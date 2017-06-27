@@ -25,11 +25,15 @@ export const createRestaurant = restaurant => dispatch => (
   ApiUtil.addRestaurant(restaurant).then(restaurant => dispatch(receiveRestaurant(restaurant)))
 );
 
-export function showRestaurants() {
-  return dispatch => {
-    return ApiUtil.show_restaurants().then(restaurants => dispatch(receiveRestaurants(restaurants)));
-  };
-}
+// export function showRestaurants() {
+//   return dispatch => {
+//     return ApiUtil.show_restaurants().then(restaurants => dispatch(receiveRestaurants(restaurants)));
+//   };
+// }
+
+export const showRestaurants = filters => dispatch => (
+  ApiUtil.show_restaurants(filters).then(restaurants => (dispatch(receiveRestaurants(restaurants))))
+);
 
 export const deleteRestaurant = restaurant => dispatch => (
   ApiUtil.removeRestaurant(restaurant).then(restaurant => dispatch(removeRestaurant(restaurant)))
