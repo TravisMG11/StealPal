@@ -13,18 +13,18 @@ Meal.destroy_all
 
 
 User.create!(email: 'hungry@hunger.com', password: 'starving')
-rest1 = Restaurant.create!(name: "Yo Momma's Diner", latitude: 1, longitude: 1, address: "Nunya Bizniss")
-rest2 = Restaurant.create!(name: "Mos Eisley Cantina", latitude: 2, longitude: 2, address: "Nunya Bizniss")
-rest3 = Restaurant.create!(name: "Joey P's Pizzeria", latitude: 3, longitude: 3, address: "Nunya Bizniss")
-rest4 = Restaurant.create!(name: "David Chen's Burger Pen", latitude: 4, longitude: 4, address: "Nunya Bizniss")
-rest5 = Restaurant.create!(name: "Bob's Burgers", latitude: 5, longitude: 5, address: "Nunya Bizniss")
-rest6 = Restaurant.create!(name: "Charlie's Cephalopods", latitude: 6, longitude: 6, address: "Nunya Bizniss")
-rest7 = Restaurant.create!(name: "Vlad's Vegan Beach Restaurant", latitude: 7, longitude: 7, address: "Nunya Bizniss")
-rest8 = Restaurant.create!(name: "The Krusty Krab", latitude: 8, longitude: 8, address: "Nunya Bizniss")
-rest9 = Restaurant.create!(name: "Soprano's", latitude: 9, longitude: 9, address: "Nunya Bizniss")
-rest10 = Restaurant.create!(name: "Hola Pasta Mexitalian", latitude: 10, longitude: 10, address: "Nunya Bizniss")
-rest11 = Restaurant.create!(name: "Wen Bo's Rugged Jaw Saloon", latitude: 11, longitude: 11, address: "Nunya Bizniss")
-rest12 = Restaurant.create!(name: "Skinny Dipping Sauces With Wadah", latitude: 12, longitude: 12, address: "Nunya Bizniss")
+rest1 = Restaurant.create!(name: "Yo Momma's Diner", latitude: 40.742033, longitude: -73.989041, address: "999 Broadway")
+rest2 = Restaurant.create!(name: "Mos Eisley Cantina", latitude: 40.743624, longitude: -73.996233, address: "210 7th Ave")
+rest3 = Restaurant.create!(name: "Joey P's Pizzeria", latitude: 40.740889, longitude: -73.990295, address: "170 5th Ave")
+rest4 = Restaurant.create!(name: "David Chen's Burger Pen", latitude: 40.745372, longitude: -73.990614, address: "796 6th Ave")
+rest5 = Restaurant.create!(name: "Bob's Burgers", latitude: 40.745242, longitude: -73.995004, address: "250 7th Ave")
+rest6 = Restaurant.create!(name: "Charlie's Cephalopods", latitude: 40.744032, longitude: -73.993608, address: "124 W24th St")
+rest7 = Restaurant.create!(name: "Vlad's Vegan Beach Restaurant", latitude: 40.745536, longitude: -73.992939, address: "143 W26th St")
+rest8 = Restaurant.create!(name: "The Krusty Krab", latitude: 40.746308, longitude:  -73.991344, address: "116 W28th St")
+rest9 = Restaurant.create!(name: "Soprano's", latitude: 40.742019, longitude: -73.993671, address: "675 6th Ave")
+rest10 = Restaurant.create!(name: "Hola Pasta Mexitalian", latitude: 40.740583, longitude: -73.993302, address: "40 W20th St")
+rest11 = Restaurant.create!(name: "Wen Bo's Rugged Jaw Saloon", latitude: 40.742476, longitude: -73.991409, address: "49 W23rd St")
+rest12 = Restaurant.create!(name: "Skinny Dipping Sauces With Wadah", latitude: 40.741950, longitude: -73.992887, address: "56 W 22nd St")
 
 
 moms = File.open('app/assets/images/soop.jpg')
@@ -56,24 +56,24 @@ Meal.create!(name: "Low Fat Sampler", restaurant_id: rest12.id, portion_size: "S
 
 [rest1, rest2, rest3, rest4, rest5, rest6, rest7, rest8, rest9, rest10, rest11, rest12].each(&:set_todays_meal!)
 
-# Mos Eisley Cantina210 7th Ave
+# Mos Eisley Cantina 210 7th Ave
 #
-# Charlie's Cephalopods124 W24th St
+# Charlie's Cephalopods 124 W24th St
 #
-# David Chen's Burger Pen796 6th Ave
+# David Chen's Burger Pen 796 6th Ave
 #
-# Wen Bo's Pizzaria49 W23rd St
+# Wen Bo's Pizzaria 49 W23rd St
 #
-# Soprano's675 6th Ave
+# Soprano's 675 6th Ave
 #
-# Hola Pasta Mexitalian40 W20th St
+# Hola Pasta Mexitalian 40 W20th St
 #
-# Yo Mama's Diner1097 Broadway
+# Yo Mama's Diner 1097 Broadway
 #
-# Vlad's Vegan Beach Restaurant143 W26th St
+# Vlad's Vegan Beach Restaurant 143 W26th St
 #
-# Bob's Burgers250 7th Ave
+# Bob's Burgers 250 7th Ave
 #
-# The Krusty Krab177 W24th St
+# The Krusty Krab 177 W24th St
 #
 # Yo Momma's Diner Down The Street

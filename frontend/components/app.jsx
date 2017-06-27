@@ -26,7 +26,7 @@ const App = () => (
       <AuthRoute path="/sign_up" component={SessionFormContainer} />
 
     </div>
-    <ProtectedRoute exact path="/restaurants" component={RestaurantIndexContainer} />
+    <ProtectedRoute exact path="/restaurants" component={RestaurantSearchContainer} />
     <div className="purple-foot">
 
     </div>

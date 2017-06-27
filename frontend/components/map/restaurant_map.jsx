@@ -12,12 +12,14 @@ class RestaurantMap extends React.Component {
 
   componentDidMount() {
     const map = this.refs.map;
+    debugger
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.restaurants);
   }
 
   componentDidUpdate() {
+    debugger
     this.MarkerManager.updateMarkers(this.props.restaurants);
   }
 
