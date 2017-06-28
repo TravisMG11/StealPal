@@ -1,16 +1,14 @@
 import { connect } from 'react-redux';
-// import RestaurantsSearch from './restaurants_search';
 import SearchBar from './search_bar';
-import { fetchSearchRestaurants } from '../../actions/restaurant_actions';
-import { asArray } from '../../reducers/selector';
+import { updateSearchTerm } from '../../actions/search_actions';
 
 const mapStateToProps = state => ({
-  restaurants: asArray(state)
+  searchTerm: state.searchTerm
 });
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchSearchRestaurants: searchTerm => dispatch(fetchSearchRestaurants(searchTerm))
+    updateSearchTerm: searchTerm => dispatch(updateSearchTerm(searchTerm))
   };
 };
 

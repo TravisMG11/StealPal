@@ -4,19 +4,17 @@ import { showRestaurants, deleteRestaurant, createRestaurant } from "../../actio
 import { values } from "lodash";
 import RestaurantsIndex from "./restaurants_index";
 import { asArray } from '../../reducers/selector';
+import { searchRestaurants } from '../../reducers/selector';
 
-function selectAllRestaurants(restaurants) {
-  return values(restaurants);
-}
+function mapStateToProps(state) {
+  const nameSearchResults = searchRestaurants(values(state.restaurants), state.searchTerm);
+  const sizeSearchResults = sizeRestaurants(nameSearchResults, state.size);
+  // const typeSearchResults = typeRestaurants(sizeSearchResults, state.type);
 
-function mapStateToProps({restaurants}) {
   return {
-    restaurants: selectAllRestaurants(restaurants)
+    restaurants: typeSearchResults
   };
 }
-// const mapStateToProps = state => ({
-//   restaurants: asArray(state)
-// });
 
 function mapDispatchToProps(dispatch) {
   return {

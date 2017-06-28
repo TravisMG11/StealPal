@@ -8,7 +8,7 @@ const RootReducer = combineReducers({
   session: SessionReducer,
   restaurants: RestaurantReducer,
   filters: FiltersReducer,
-  search: SearchReducer
+  searchTerm: SearchReducer
 });
 
 export default RootReducer;

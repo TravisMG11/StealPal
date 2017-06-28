@@ -44,16 +44,3 @@ export function addRestaurant(restaurant) {
     data: {restaurant}
   });
 }
-
-export function fetchSearchRestaurants(searchTerm) {
-  return $.ajax({
-    method: 'GET',
-    url: "/api/restaurants"
-  });
-}
-// export const fetchSearchRestaurants = searchTerm => {
-//   return $.ajax({
-//     method: 'GET',
-//     url: /api/restaurants
-//   });
-// }
