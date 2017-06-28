@@ -4,10 +4,13 @@ import { showRestaurants, deleteRestaurant, createRestaurant } from "../../actio
 import { values } from "lodash";
 import RestaurantsIndex from "./restaurants_index";
 import { asArray } from '../../reducers/selector';
-import { searchRestaurants } from '../../reducers/selector';
+import { searchRestaurants, filterBySize, filterByType } from '../../reducers/selector';
 
 function mapStateToProps(state) {
   const nameSearchResults = searchRestaurants(values(state.restaurants), state.searchTerm);
+  const sizeSearchResults = filterBySize(nameSearchResults, state.searchSize);
+  const typeSearchResults = filterByType(sizeSearchResults, state.searchType);
+
 
 
   return {

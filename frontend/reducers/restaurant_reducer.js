@@ -9,7 +9,7 @@ const RestaurantReducer = (state = {}, action) => {
     }
     case RECEIVE_RESTAURANT: {
       const newRestaurant = {[action.restaurant.id]: action.restaurant};
-      const newState = merge({}, state, newPost);
+      const newState = merge({}, state, newRestaurant);
       return newState;
     }
     case REMOVE_RESTAURANT: {
