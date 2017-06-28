@@ -14,12 +14,13 @@ const defaultState = {
 const SearchReducer = (state = defaultState, action) => {
   switch (action.type) {
     case UPDATE_SEARCHTERM: {
-      const searchTerm = action.searchTerm.searchTerm;
+      const searchTerm = action.searchTerm;
       return merge({}, state, {searchTerm});
     }
     case UPDATE_SEARCHSIZE: {
       const searchSize = action.searchSize;
-      return merge({}, state, {searchSize} );
+      const newSearchSize = merge({}, state.searchSize, {[searchSize]: !state.searchSize[searchSize]});
+      return merge({}, state, {newSearchSize} );
     }
     case UPDATE_SEARCHTYPE: {
       const searchType = action.searchType;

@@ -6,6 +6,19 @@ const SearchBar = (props) => {
     props.updateSearchTerm(e.currentTarget.value);
   };
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (e.currentTarget.className === "check-box type") {
+      e.currentTarget.checked = true;
+      props.updateSearchType(e.currentTarget.id);
+    } else {
+      props.updateSearchSize(e.currentTarget.id);
+    }
+
+    // const searchItem = props.
+    console.log('The link was clicked.');
+  };
+
   return (
     <div className="search-bar-div">
       <form className="search-bar">
@@ -14,42 +27,42 @@ const SearchBar = (props) => {
         <input className="loco-input"value={"Search by location"} />
           <div className="check-row">
             <div className="check-field" >
-              <input className="check-box" type="checkbox" checked={props.searchType === 'American'}/>
-              <label className="checkbox-label">American</label>
+              <input id="American" className="check-box type" onClick={handleClick} type="checkbox" checked={false}/>
+              <label htmlFor="American" className="checkbox-label">American</label>
             </div>
             <div className="check-field" >
-              <input className="check-box" type="checkbox" checked={props.searchType === 'Mexican'}/>
-              <label className="checkbox-label">Mexican</label>
+              <input id="Mexican" className="check-box type" onClick={handleClick} type="checkbox" checked={props.searchType === 'Mexican'}/>
+              <label htmlFor="Mexican" className="checkbox-label">Mexican</label>
             </div>
             <div className="check-field" >
-              <input className="check-box" type="checkbox" checked={props.searchType === 'Cartoon'}/>
-              <label className="checkbox-label">Cartoon</label>
+              <input id="Cartoon" className="check-box type" onClick={handleClick} type="checkbox" checked={props.searchType === 'Cartoon'}/>
+              <label htmlFor="Cartoon" className="checkbox-label">Cartoon</label>
             </div>
             <div className="check-field" >
-              <input className="check-box" type="checkbox" checked={props.searchType === 'Italian'}/>
-              <label className="checkbox-label">Italian</label>
+              <input id="Italian" className="check-box type" onClick={handleClick} type="checkbox" checked={props.searchType === 'Italian'}/>
+              <label htmlFor="Italian" className="checkbox-label">Italian</label>
             </div>
             <div className="check-field" >
-              <input className="check-box" type="checkbox" checked={props.searchType === 'Fusion'}/>
-              <label className="checkbox-label">Fusion</label>
+              <input id="Fusion" className="check-box type" onClick={handleClick} type="checkbox" checked={props.searchType === 'Fusion'}/>
+              <label htmlFor="Fusion" className="checkbox-label">Fusion</label>
             </div>
             <div className="check-field" >
-              <input className="check-box" type="checkbox" checked={props.searchType === 'Rugged'}/>
-              <label className="checkbox-label">Rugged</label>
+              <input id="Rugged" className="check-box type" onClick={handleClick} type="checkbox" checked={props.searchType === 'Rugged'}/>
+              <label htmlFor="Rugged" className="checkbox-label">Rugged</label>
             </div>
           </div>
           <div className="check-row">
             <div className="check-field" >
-              <input className="check-box" type="checkbox" checked={props.searchSize === 'S'}/>
-              <label className="checkbox-label">Light Lunch</label>
+              <input id="S" className="check-box" onClick={handleClick} type="checkbox" checked={props.searchSize === 'S'}/>
+              <label htmlFor="S" className="checkbox-label">Light Lunch</label>
             </div>
             <div className="check-field" >
-              <input className="check-box" type="checkbox" checked={props.searchSize === 'M'}/>
-              <label className="checkbox-label">Mid Size</label>
+              <input id="M" className="check-box" onClick={handleClick} type="checkbox" checked={props.searchSize === 'M'}/>
+              <label htmlFor="M" className="checkbox-label">Mid Size</label>
             </div>
             <div className="check-field" >
-              <input className="check-box" type="checkbox" checked={props.searchSize === 'L'}/>
-              <label className="checkbox-label">Lots O Food</label>
+              <input id="L" className="check-box" onClick={handleClick} type="checkbox" checked={props.searchSize === 'L'}/>
+              <label htmlFor="L" className="checkbox-label">Lots O Food</label>
             </div>
           </div>
       </form>
