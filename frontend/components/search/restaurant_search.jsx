@@ -7,7 +7,7 @@ import SearchBarContainer from './search_bar_container';
 
 const RestaurantSearch = ({ restaurants, updateFilter }) => {
   return (
-    <div className="map-stuff">
+    <div className="find-stuff">
       <SearchBarContainer />
       <RestaurantIndexContainer />
       <RestaurantMap restaurants={restaurants} updateFilter={updateFilter}/>

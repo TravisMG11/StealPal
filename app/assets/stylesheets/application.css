@@ -13,8 +13,50 @@
  *= require_tree .
  *= require_self
  */
- .map-stuff {
+ .find-stuff {
+   width: 100%;
    display: flex;
+   flex-direction: column;
+ }
+ .search-bar-div {
+   width: 75%;
+   height: 100px;
+   padding: 10px 50px 0 20px;
+   background-color: #DFD9D8;
+   border-bottom: 1px solid #C0BCBB;
+ }
+ .search-bar {
+    box-sizing: border-box;
+    text-align: left;
+    color: #333;
+ }
+
+ .search-bar > input {
+   /*margin-left: 50px;*/
+   /*margin: 0 auto;*/
+   border: 1px solid grey;
+   background-color: white;
+   /*width: 500px;*/
+   height: 35px;
+   /*padding: 1px;*/
+   padding: 1px 30px 1px 6px;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #333;
+ }
+
+ .city-input {
+   width: 24.2%;
+   margin-left: 10px;
+   font-weight: bolder;
+ }
+ .meal-input {
+   width: 35.2%;
+   margin-left: 10px;
+ }
+ .loco-input {
+   width: 36.3%;
+   margin-left: 10px;
  }
  .map-box {
    background-color: white;

@@ -8,11 +8,10 @@ import { searchRestaurants } from '../../reducers/selector';
 
 function mapStateToProps(state) {
   const nameSearchResults = searchRestaurants(values(state.restaurants), state.searchTerm);
-  const sizeSearchResults = sizeRestaurants(nameSearchResults, state.size);
-  // const typeSearchResults = typeRestaurants(sizeSearchResults, state.type);
+
 
   return {
-    restaurants: typeSearchResults
+    restaurants: nameSearchResults
   };
 }
 
