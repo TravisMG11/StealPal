@@ -3,6 +3,7 @@ import * as ApiUtil from '../util/meal_api_util';
 export const RECEIVE_MEALS = 'RECEIVE_MEALS';
 export const RECEIVE_MEAL = 'RECEIVE_MEAL';
 export const REMOVE_MEAL = 'REMOVE_MEAL';
+export const RESERVE_MEAL = 'RESERVE_MEAL';
 
 
 

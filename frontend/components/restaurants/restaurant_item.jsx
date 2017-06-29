@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 export default ({ restaurant }) => (
-  <li className="restaurant">
+  <li className="restaurant overlay">
     <div>
       <img className="meal-pic" src={restaurant.meal.image_url}/>
       <span className="meal-name">{restaurant.meal.name}</span>
