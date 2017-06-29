@@ -23,6 +23,9 @@ const SearchReducer = (state = defaultState, action) => {
       return merge({}, state, {searchSize: newSearchSize} );
     }
     case UPDATE_SEARCHTYPE: {
+      if (action.searchType === state.searchType) {
+        return merge({}, state, {searchType: ''} );
+      }
       const searchType = action.searchType;
       return merge({}, state, {searchType} );
     }

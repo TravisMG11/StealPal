@@ -16,11 +16,18 @@ export const receiveMeal = meal => ({
   meal
 });
 
-export const removeMeal = meal => ({
-  type: REMOVE_MEAL,
-  meal
+export const removeMeal = () => ({
+  type: REMOVE_MEAL
 });
 
+export const reserveMeal = meal => ({
+  type: RESERVE_MEAL,
+  meal
+})
+
+// export const makeReservation = meal => ({
+//
+// })
 export const createRest = meal => dispatch => (
   ApiUtil.addMeal(meal).then(meal => dispatch(receiveMeal(meal)))
 );

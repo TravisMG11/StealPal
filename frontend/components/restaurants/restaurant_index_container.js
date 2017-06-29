@@ -7,16 +7,16 @@ import { asArray } from '../../reducers/selector';
 import { searchRestaurants, filterBySize, filterByType } from '../../reducers/selector';
 
 function mapStateToProps(state) {
-  // const nameSearchResults = searchRestaurants(values(state.restaurants), state.searchTerm.searchTerm);
-  // const sizeSearchResults = filterBySize(nameSearchResults, state.searchTerm.searchSize);
-  const sizeSearchResults = filterBySize(values(state.restaurants), state.searchTerm.searchSize);
-  // const typeSearchResults = filterByType(sizeSearchResults, state.searchTerm.searchType);
+  const nameSearchResults = searchRestaurants(values(state.restaurants), state.searchTerm.searchTerm);
+  const sizeSearchResults = filterBySize(nameSearchResults, state.searchTerm.searchSize);
+  // const sizeSearchResults = filterBySize(values(state.restaurants), state.searchTerm.searchSize);
+  const typeSearchResults = filterByType(sizeSearchResults, state.searchTerm.searchType);
 
 
   return {
-    // restaurants: typeSearchResults
+    restaurants: typeSearchResults
     // restaurants: nameSearchResults
-    restaurants: sizeSearchResults
+    // restaurants: sizeSearchResults
   };
 }
 

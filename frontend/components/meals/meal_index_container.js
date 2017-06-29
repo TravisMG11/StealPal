@@ -1,25 +1,24 @@
 import React from "react";
 import { connect } from "react-redux";
-import { showMeals, deleteMeal, createMeal } from "../../actions/meal_actions";
+import { showMeals, deleteMeal, createMeal, reserveMeal } from "../../actions/meal_actions";
 import { values } from "lodash";
-import MealsIndex from "./meals_index";
+// import MealsIndex from "./meals_index";
 
-function selectAllMeals(meals) {
-  return values(meals);
-}
 
-function mapStateToProps({meals}) {
+const mapStateToProps = state => ({
+    meal: reserveMeal(meal)
+});
+
+const mapDispatchToProps = dispatch => {
   return {
-    meals: selectAllMeals(meals)
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    createMeal: (meal) => dispatch(createMeal(meal)),
-    showMeals: () => dispatch(showMeals()),
+    // createMeal: (meal) => dispatch(createMeal(meal)),
+    // showMeals: () => dispatch(showMeals()),
+    reserveMeal: (meal) => dispatch(reserveMeal(meal))
     deleteMeal: (meal) => dispatch(deleteMeal(meal))
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MealsIndex);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)();

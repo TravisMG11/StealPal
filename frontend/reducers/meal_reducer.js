@@ -1,22 +1,31 @@
 import merge from "lodash/merge";
 import {RECEIVE_MEALS, RECEIVE_MEAL, REMOVE_MEAL} from "../actions/meal_actions";
 
-const MealReducer = (state = {}, action) => {
+const defaultState = {}
+
+const MealReducer = (state = defaultState, action) => {
   switch(action.type) {
     case RECEIVE_MEALS: {
       let newState = action.meals;
       return newState;
     }
     case RECEIVE_MEAL: {
-      const newMeal = {[action.meal.id]: action.meal};
-      const newState = merge({}, state, newPost);
-      return newState;
+      // const meal = action.meal;
+      // const newState = merge({}, state, {meal});
+      // return newState;
+      return action.meal
     }
     case REMOVE_MEAL: {
-      const newState = merge({}, state);
-      delete newState[action.meal.id];
+      const newState = {};
       return newState;
     }
+    // case RESERVE_MEAL: {
+    //   const newState = merge({}, state, {})
+    //   // user = currentUser
+    //   // mealSize =
+    //   // mealsLeft = limit - 1
+    //   // change limit
+    // }
     default:
       return state;
   }

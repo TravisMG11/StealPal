@@ -17,12 +17,11 @@ export const filterBySize = (restaurants, searchSize) => {
   if (!values(searchSize).includes(true)) {
     return restaurants;
   }
-    restaurants.filter(function(restaurant) {
+    return restaurants.filter(function(restaurant) {
       const portionSize = restaurant.meal.portion_size;
-      // if (portionSize === searchSize) {
-      //   return true;
-      // }
-      portionSize === searchSize
+      if (searchSize[portionSize]) {
+        return true;
+      }
     })
 
 };
@@ -32,7 +31,7 @@ export const filterByType = (restaurants, searchType) => {
   if ( searchType === '' ) {
     return restaurants;
   } else {
-    restaurants.filter(function(restaurant) {
+    return restaurants.filter(function(restaurant) {
       const cuisineType = restaurant.cuisine_type;
       if (cuisineType === searchType) {
         return true;
