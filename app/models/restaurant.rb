@@ -1,5 +1,5 @@
 class Restaurant < ActiveRecord::Base
-  validates :name, :latitude, :longitude, presence: true
+  validates :name, :latitude, :longitude, :cuisine_type, presence: true
 
   has_many :meals
 

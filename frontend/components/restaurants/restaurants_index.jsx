@@ -1,19 +1,22 @@
 import React from "react";
 import RestaurantItem from "./restaurant_item";
+import RestaurantIndexContainer from './restaurant_index_container';
 
-class RestaurantsIndex extends React.Component {
+
+// class RestaurantsIndex extends React.Component {
+const RestaurantsIndex = (props) => {
 
   // componentDidMount() {
   //   this.props.showRestaurants();
   // }
 
-  render() {
-    const restaurants = this.props.restaurants.map(restaurant => {
-      return <RestaurantItem key={restaurant.id} restaurant={ restaurant } />;
-    });
-    return (
+  // render() {
+  const restaurants = props.restaurants.map(restaurant => {
+    return <RestaurantItem key={restaurant.id} restaurant={ restaurant } />;
+  });
+  return (
+    // return (
       <div className="indexDiv">
-        <h1 className="indexTitle">Restaurants?!?!?!</h1>
         <div className="indexPage">
           <div>
             <ul className="restaurants">{restaurants}</ul>
@@ -21,7 +24,8 @@ class RestaurantsIndex extends React.Component {
         </div>
       </div>
     );
-  }
-}
+  // }
+  // )
+};
 
 export default RestaurantsIndex;

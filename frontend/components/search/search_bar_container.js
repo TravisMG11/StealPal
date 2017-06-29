@@ -3,9 +3,9 @@ import SearchBar from './search_bar';
 import { updateSearchTerm, updateSearchSize, updateSearchType } from '../../actions/search_actions';
 
 const mapStateToProps = state => ({
-  searchTerm: state.searchTerm,
-  searchSize: state.searchSize,
-  searchType: state.searchType
+  searchTerm: state.searchTerm.searchTerm,
+  searchSize: state.searchTerm.searchSize,
+  searchType: state.searchTerm.searchType
 });
 
 const mapDispatchToProps = dispatch => {
