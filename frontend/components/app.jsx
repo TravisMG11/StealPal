@@ -21,7 +21,6 @@ const App = () => (
       <button className="log-out-button" onClick={log_out}>LOG OUT</button>
     </header>
     <div className="fake-modal">
-    <h3 className="placeholder-button">LOG IN</h3>
       <GreetingContainer className="greeting-container"/>
       <AuthRoute path="/log_in" component={SessionFormContainer} />
       <AuthRoute path="/sign_up" component={SessionFormContainer} />
