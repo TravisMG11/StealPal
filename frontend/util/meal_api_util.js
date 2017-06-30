@@ -29,10 +29,10 @@ export function reserveMeal(usermeal) {
   });
 }
 
-export function removeUsermeal(meal_id) {
+export function removeUsermeal(usermeal_id) {
   return $.ajax({
     method: "DELETE",
-    url: `api/usermeals/${meal_id}`
+    url: `api/usermeals/${usermeal_id}`
   });
 }
 // { name: 'food',

@@ -10,7 +10,18 @@ class Api::UsermealsController < ApplicationController
   def create
     @usermeal = Usermeal.new(usermeal_params)
     @usermeal.user_id = current_user.id
-    render "api/usermeals/show"
+    if @usermeal.save
+      @meal = @usermeal.meal
+      render "api/usermeals/show"
+    else
+      render json: ["Couldn't Reserve Meal"], status: 422
+    end
+  end
+
+  def destroy
+    usermeal = Usermeal.find_by(id: params[:id])
+    usermeal.destroy
+    render json: {}
   end
 
   private

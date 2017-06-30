@@ -5,7 +5,6 @@ import RestaurantItem from "./restaurant_item";
 
 
 // const mapStateToProps = state => {
-//     debugger
 //     return{// currentUser: state.currentUser,
 //     restaurant: state.restaurant
 //   };

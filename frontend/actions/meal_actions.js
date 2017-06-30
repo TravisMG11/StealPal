@@ -39,5 +39,5 @@ export function showMeals() {
 }
 
 export const deleteMeal = meal => dispatch => (
-  ApiUtil.removeMeal(meal).then(meal => dispatch(removeMeal(meal)))
+  ApiUtil.removeUsermeal(meal).then(meal => dispatch(removeUsermeal(meal)))
 );

@@ -87,6 +87,37 @@
 
 }
 
+.meal-res {
+  width: 75%;
+  height: 200px;
+  background-color: #DFD9D8;
+  border-bottom: 1px solid #C0BCBB;
+}
+
+
+.res-info {
+  display: flex;
+  // flex-direction
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+}
+
+.res-info > img {
+  width: 150px;
+  height: 150px;
+}
+.info-list {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.empty {
+  height: 0;
+}
 .meal-pic {
   width: 100%;
   height: 440px;
