@@ -1,4 +1,4 @@
-class UserusermealsController < ApplicationController\
+class Api::UsermealsController < ApplicationController
   # def index
   #   @usermeals = UserMeal.all
   # end
@@ -8,14 +8,14 @@ class UserusermealsController < ApplicationController\
   # end
 
   def create
-    @usermeal = UserMeal.new(usermeal_params)
-    @usermeal.user_id = currentUser.id
-    render :show
+    @usermeal = Usermeal.new(usermeal_params)
+    @usermeal.user_id = current_user.id
+    render "api/usermeals/show"
   end
 
   private
 
   def usermeal_params
-    params.require(:usermeal).permit(:meal_id, :time)
+    params.require(:usermeal).permit(:meal_id, :reservation_time)
   end
 end

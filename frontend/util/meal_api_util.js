@@ -23,16 +23,16 @@
 
 export function reserveMeal(usermeal) {
   return $.ajax({
-    url: "/api/meals",
+    url: "/api/usermeals",
     method: "POST",
     data: usermeal
   });
 }
 
-export function removeRestaurant(meal_id) {
+export function removeUsermeal(meal_id) {
   return $.ajax({
     method: "DELETE",
-    url: `api/meals/${meal_id}`
+    url: `api/usermeals/${meal_id}`
   });
 }
 // { name: 'food',

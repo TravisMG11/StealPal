@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     resource :user, only: [:create]
     resource :session, only: [:create, :destroy, :show]
     resources :restaurants, only: [:index, :show]
-    resources :meals, only: %i[create destroy]
+    resources :meals, only: [:create, :destroy]
+    resources :usermeals, only: [:create, :destroy]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

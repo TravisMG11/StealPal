@@ -6,10 +6,10 @@ const RestaurantItem = (props) => {
 
   const handleClick = (e) => {
     // e.preventDefault();
-    debugger
-    props.reserveMeal({meal: props.restaurant.meal});
+    props.reserveMeal({usermeal: {meal_id: props.restaurant.meal.id}});
     console.log('The link was clicked.');
   };
+
   return (
     <li className="please-please-work">
       <div className="restaurant">

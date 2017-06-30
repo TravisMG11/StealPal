@@ -11,7 +11,7 @@ const sessionLinks = () => (
 
 const makeItPersonal = (currentUser, log_out) => (
   <div className="header-group">
-    <h2 className="name-header">Hey, {currentUser.email}!</h2>
+    <Link to="/sign_up">Sign Up?</Link>
     <button className="button-header" onClick={log_out}>Log Out!</button>
   </div>
 );
