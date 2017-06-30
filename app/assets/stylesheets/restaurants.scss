@@ -35,33 +35,55 @@
 }
 
 .restaurant {
+  // margin: 10px;
+  // min-width: 315px;
+  // max-width: 445px;
+  // background-color: white;
+  // flex-grow: 1;
+  // width: 30%;
+  // height: 540px;
+  font-size: 15;
+  // border: 1px solid grey;
+  // border-radius: 7px;
+}
+.please-please-work {
+  position: relative;
   margin: 10px;
   min-width: 315px;
   max-width: 445px;
-  background-color: white;
+  // background-color: white;
   flex-grow: 1;
   width: 30%;
   height: 540px;
-  font-size: 15;
+  // font-size: 15;
   border: 1px solid grey;
   border-radius: 7px;
 }
-
 .overlay {
+  // margin: 10px;
+  // min-width: 315px;
+  // max-width: 445px;
+  // height: 540px;
+  // border: 1px solid grey;
+  // border-radius: 7px;
   position: absolute;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #430098;
+  // opacity: 0.8;
+  // transition: .5s ease;
 }
 
-.restaurant:hover .overlay {
-  opacity: 1;
+.please-please-work:hover .overlay {
+  background-color: #430098;
+  opacity: 0.8;
+}
+.please-please-work:hover .reserve-button {
+  display: block;
+
 }
 
 .meal-pic {
@@ -95,4 +117,15 @@
   font-weight: bolder;
   color: #FF4338;
   font-size: 20px;
+}
+.reserve-button {
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FF4338;
+  width: 90%;
+  border: 1px solid grey;
+  text-align: center;
+  border-radius: 7px;
+  margin: 0 auto;
+  height: 35px;
 }

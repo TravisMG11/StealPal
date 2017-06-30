@@ -2,11 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { showMeals, deleteMeal, createMeal, reserveMeal } from "../../actions/meal_actions";
 import { values } from "lodash";
-import MealReserved from "./meal_reserved";
+import MealItem from "./meal_item";
 
 
 const mapStateToProps = state => ({
-    meal: reserveMeal(state.meal)
+    // currentUser: state.currentUser,
+    meal: state.meal
 });
 
 const mapDispatchToProps = dispatch => {
@@ -21,4 +22,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MealReserved);
+)(MealItem);

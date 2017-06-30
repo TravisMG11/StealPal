@@ -21,10 +21,9 @@ export const removeMeal = () => ({
   type: REMOVE_MEAL
 });
 
-export const reserveMeal = meal => ({
-  type: RESERVE_MEAL,
-  meal
-})
+export const reserveMeal = meal => dispatch => (
+  ApiUtil.reserveMeal(meal).then(meal => dispatch(receiveMeal(meal)))
+);
 
 // export const makeReservation = meal => ({
 //

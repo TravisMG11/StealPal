@@ -21,11 +21,11 @@
 //   });
 // }
 
-export function reserveMeal(meal_id) {
+export function reserveMeal(usermeal) {
   return $.ajax({
     url: "/api/meals",
     method: "POST",
-    data: {meal_id}
+    data: usermeal
   });
 }
 

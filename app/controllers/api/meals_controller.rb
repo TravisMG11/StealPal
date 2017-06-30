@@ -15,6 +15,7 @@ class Api::MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:meal).permit(:name, :limit, :restaurant_id)
+    debugger
+    params.require(:meal).permit(:name, :id, :limit, :portion_size, :restaurant_id, :restaurant_address, :date, :pickup_time, :image_url)
   end
 end

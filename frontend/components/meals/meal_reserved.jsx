@@ -1,16 +1,15 @@
-import React from "react";
-import MealItem from "./meal_item";
-
-const MealReserved = (props) => {
-
-  return (
-    <div className="meal-res">
-      <div>{MealItem}</div>
-    </div>
-  );
-}
-
-export default MealReserved;
+// import React from "react";
+// import MealItem from "./meal_item";
+//
+// const MealReserved = (props) => {
+//
+//   return (
+//
+//       <div className="meal-res">{MealItem}</div>
+//   );
+// }
+//
+// export default MealReserved;
 
 
 

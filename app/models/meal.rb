@@ -2,6 +2,7 @@ class Meal < ActiveRecord::Base
   validates :name, :limit, :restaurant_id, :portion_size, presence: true
 
   belongs_to :restaurant
+  has_many :usermeals
   has_many :users
 
   has_attached_file :image, default_url: "burgernfries.jpg"
