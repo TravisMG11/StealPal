@@ -11,7 +11,6 @@ const MealReserved = (props) => {
 
 
   if (props.meal.id) {
-    debugger
     return (
       <div className="meal-res">
         <div className="res-info">

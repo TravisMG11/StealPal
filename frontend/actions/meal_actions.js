@@ -17,12 +17,12 @@ export const receiveMeal = meal => ({
   meal
 });
 
-export const removeMeal = () => ({
+export const removeUsermeal = () => ({
   type: REMOVE_MEAL
 });
 
-export const reserveMeal = meal => dispatch => (
-  ApiUtil.reserveMeal(meal).then(meal => dispatch(receiveMeal(meal)))
+export const reserveMeal = usermeal => dispatch => (
+  ApiUtil.reserveMeal(usermeal).then(usermeal => dispatch(receiveMeal(usermeal)))
 );
 
 // export const makeReservation = meal => ({
