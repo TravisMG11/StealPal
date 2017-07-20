@@ -18,10 +18,10 @@ const App = () => (
   <div className="main-stuff">
     <header className="main-header">
       <img className="logo" src={window.images.stolen_logo} />
-      <button className="log-out-button" onClick={log_out}>LOG OUT</button>
+      <button className="log-out-button" onClick={window.log_out()}>LOG OUT</button>
     </header>
     <div className="fake-modal">
-      <GreetingContainer className="greeting-container"/>
+
       <AuthRoute path="/log_in" component={SessionFormContainer} />
       <AuthRoute path="/sign_up" component={SessionFormContainer} />
 

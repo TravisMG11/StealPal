@@ -7,7 +7,7 @@ import { showRestaurants } from './actions/restaurant_actions';
   window.showRestaurants = showRestaurants;
 // window.sign_up = sign_up;
 // window.log_in = log_in;
-// window.log_out = log_out;
+window.log_out = log_out;
 
 document.addEventListener('DOMContentLoaded', () => {
   // const store = configureStore();

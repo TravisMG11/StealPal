@@ -26,6 +26,7 @@ const SearchBar = (props) => {
         <input className="meal-input" placeholder="Search by restaurant or meal" value={props.searchTerm.searchTerm} onChange={handleChange} />
         <input className="loco-input"value={"Search by location"} />
           <div className="check-row">
+            <label className="row-label">CUISINE</label>
             <div className="check-field" >
               <input id="American" className="check-box type" onClick={handleClick} type="checkbox" checked={props.searchType === 'American'}/>
               <label htmlFor="American" className="checkbox-label">American</label>
@@ -50,8 +51,13 @@ const SearchBar = (props) => {
               <input id="Rugged" className="check-box type" onClick={handleClick} type="checkbox" checked={props.searchType === 'Rugged'}/>
               <label htmlFor="Rugged" className="checkbox-label">Rugged</label>
             </div>
+            <div className="check-field" >
+              <input id="Vegetarian" className="check-box type" onClick={handleClick} type="checkbox" checked={props.searchType === 'Vegetarian'}/>
+              <label htmlFor="Vegetarian" className="checkbox-label">Vegetarian</label>
+            </div>
           </div>
           <div className="check-row">
+            <label className="row-label">PORTION</label>
             <div className="check-field" >
               <input id="S" className="check-box" onClick={handleClick} type="checkbox" checked={props.searchSize.S}/>
               <label htmlFor="S" className="checkbox-label">Light Lunch</label>
