@@ -19,27 +19,5 @@ class Restaurant < ActiveRecord::Base
         .where("longitude < ?", bounds[:northEast][:lng])
   end
 
-  # def new
-  #
-  # end
-  #
-  # def show
-  #
-  # end
-  #
-  # def index
-  #
-  # end
-  #
-  # def create
-  #
-  # end
-  #
-  # def update
-  #
-  # end
-  #
-  # def delete
-  #
-  # end
+
 end

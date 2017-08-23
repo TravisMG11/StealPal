@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => {
   return {
     deleteMeal: (usermeal) => dispatch(deleteMeal(usermeal))
   };
-}
+};
 
 export default connect(
   mapStateToProps,

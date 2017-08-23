@@ -16,10 +16,11 @@ const MealReserved = (props) => {
         <div className="res-info">
           <img className="res-pic" src={props.meal.image_url} />
             <div className="info-list">
-              <span className="">Date: {props.meal.date}</span>
-              <span className="">Meal: {props.meal.name}</span>
-              <span className="">Restaurant: {props.meal.restaurant.name}</span>
-              <span className="">Address: {props.meal.restaurant.address}</span>
+              <h1 className="reservation-header">Your meal is reserved!</h1>
+              <span className="info"><h3 className="info-label">Date:</h3> {props.meal.date}</span>
+              <span className="info"><h3 className="info-label">Meal:</h3> {props.meal.name}</span>
+              <span className="info"><h3 className="info-label">Restaurant:</h3> {props.meal.restaurant.name}</span>
+              <span className="info"><h3 className="info-label">Address:</h3> {props.meal.restaurant.address}</span>
               <input onClick={handleClick} className="reserve-cancel-button" type="submit" value="Cancel Reservation" />
             </div>
         </div>
