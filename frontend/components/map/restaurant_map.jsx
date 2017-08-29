@@ -10,6 +10,7 @@ const mapOptions = {
 
 class RestaurantMap extends React.Component {
 
+
   componentDidMount() {
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
