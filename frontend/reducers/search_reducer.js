@@ -35,29 +35,3 @@ const SearchReducer = (state = defaultState, action) => {
 };
 
 export default SearchReducer;
-
-// ase RECEIVE_CURRENT_USER:
-//   const currentUser = action.currentUser;
-//   return merge({}, defaultState, {currentUser});
-// case RECEIVE_RESTAURANT: {
-//   const newRestaurant = {[action.restaurant.id]: action.restaurant};
-//   const newState = merge({}, state, newPost);
-//   return newState;
-// }
-//
-// const SearchReducer = (state = defaultState, action) => {
-//   switch (action.type) {
-//     case UPDATE_SEARCHTERM: {
-//       return action.searchTerm;
-//     }
-//     case UPDATE_SEARCHSIZE: {
-//       const newState = merge({}, state, )
-//     }
-//     case UPDATE_SEARCHTYPE: {
-//       return action.searchType;
-//     }
-//     default:
-//       return state;
-//   }
-// };
-//

@@ -22,7 +22,7 @@ export const filterBySize = (restaurants, searchSize) => {
       if (searchSize[portionSize]) {
         return true;
       }
-    })
+    });
 
 };
 
@@ -36,7 +36,7 @@ export const filterByType = (restaurants, searchType) => {
       if (cuisineType === searchType) {
         return true;
       }
-    })
+    });
   }
 
 };

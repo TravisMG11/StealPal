@@ -12,12 +12,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => {
   return {
-    // createMeal: (meal) => dispatch(createMeal(meal)),
-    // showMeals: () => dispatch(showMeals()),
     reserveMeal: (meal) => dispatch(reserveMeal(meal)),
     deleteMeal: (meal) => dispatch(deleteMeal(meal))
   };
-}
+};
 
 export default connect(
   mapStateToProps,
